@@ -6,4 +6,5 @@ Course available at [Udemy](https://www.udemy.com/docker-and-kubernetes-the-comp
 
 ## Projects
 
-- ***redis-server***: Use an existing redis image as a base image, download and install a dependency and tell the image what to do when it starts as a container.
+- ***redis-server***: Use a *redis:latest* image as a base image, download and install a dependency and tell the image what to do when it starts as a container.
+- ***nodejs-app***: A simple *node.js/express.js* "Hello world" application. Use a *node:10-alpine* as a base image and change the image's working directory, copy/install dependencies and run a default command.

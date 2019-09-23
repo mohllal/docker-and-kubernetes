@@ -1,0 +1,18 @@
+# specify a base image
+FROM node:10-alpine
+
+# change the working directory
+WORKDIR /var/app
+
+# copy both package.json and package-lock.json files first to minimize cache busting
+COPY ./package.json ./
+COPY ./package-lock.json ./
+
+# install dependencies
+RUN npm install
+
+# copy other files in build context folder to cwd in the image
+COPY ./ ./
+
+# specify a startup command
+CMD [ "npm", "start" ]
