@@ -19,8 +19,8 @@ Course available at [Udemy](https://www.udemy.com/docker-and-kubernetes-the-comp
 
 ## What I have learned
 
-- Download and install docker in different environments such as *Linux*, *Windows* and *MacOS*.
+- Download and install *Docker* in different environments such as *Linux*, *Windows* and *MacOS*.
 - Use ***Docker CLI*** to inspect and debug running containers.
-- Build custom Docker images through the *Docker Server*.
-- Use *Docker Compose* to define and run multi-container *Docker* applications.
+- Build custom Docker images through the ***Docker Server***.
+- Use ***Docker Compose*** to define and run multi-container *Docker* applications.
 - Create and configure multi-step *Docker* builds.
