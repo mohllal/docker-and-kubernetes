@@ -16,3 +16,11 @@ Course available at [Udemy](https://www.udemy.com/docker-and-kubernetes-the-comp
   - One container for the development environment which uses a *node:10-alpine* as a base image and runs a local development server via `npm run start` command.
   - One container for the testing environment which uses a *node:10-alpine* as a base image and runs the test suites via `npm run test` command.
   - One container for the production environment which uses a *node:10-alpine* as a base image and runs the production build process via `npm run build` command. And another container that uses `nignx:alpine` as a base image and run a `Nginx` web server to server the static content reside in the `build` folder.
+
+## What I have learned
+
+- Download and install docker in different environments such as *Linux*, *Windows* and *MacOS*.
+- Use ***Docker CLI*** to inspect and debug running containers.
+- Build custom Docker images through the *Docker Server*.
+- Use *Docker Compose* to define and run multi-container *Docker* applications.
+- Create and configure multi-step *Docker* builds.
