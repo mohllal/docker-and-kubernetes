@@ -1,5 +1,0 @@
-# run docker-compose.yaml file
-docker-compose up -d
-
-# shut down all the docker-compose running containers
-docker-compose down

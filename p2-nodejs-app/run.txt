@@ -1,5 +1,0 @@
-# build the Dockerfile and get the image id
-docker build .
-
-# run a container from that image with a port mapping flag
-docker container run -p 8080:8080 <image_id>
