@@ -1,0 +1,25 @@
+# the build phase
+# specify a base image
+FROM node:10-alpine as builder
+
+# change the working directory
+WORKDIR /var/app
+
+# copy both package.json and package-lock.json files first to minimize cache busting
+COPY ./package.json ./
+COPY ./package-lock.json ./
+
+# install dependencies
+RUN npm install
+
+# copy other files in build context folder to cwd in the image
+COPY ./ ./
+
+# run the build command to generate the build folder
+RUN npm run build
+
+# the run phase
+FROM nginx:alpine
+
+# copy the build folder to nginx html folder
+COPY --from=builder /var/app/build /usr/share/nginx/html

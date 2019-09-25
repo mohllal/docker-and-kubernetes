@@ -11,3 +11,8 @@ Course available at [Udemy](https://www.udemy.com/docker-and-kubernetes-the-comp
 - [***nodejs-app***](p2-nodejs-app/): A simple *node.js/express.js* "Hello world" application. Use a *node:10-alpine* as a base image and change the image's working directory, copy/install dependencies and run a default command.
 
 - [***visits-app***](p3-visits-app/): A *node.js/express.js* application that counts the number of page visits. It uses two containers, one for the Node.js server and the other for Redis to store the number of page visits value.
+
+- [***react-app***](p4-react-app/): A simple *react.js* application running on a container. It uses different containers for different working environments:
+  - One container for the development environment which uses a *node:10-alpine* as a base image and runs a local development server via `npm run start` command.
+  - One container for the testing environment which uses a *node:10-alpine* as a base image and runs the test suites via `npm run test` command.
+  - One container for the production environment which uses a *node:10-alpine* as a base image and runs the production build process via `npm run build` command. And another container that uses `nignx:alpine` as a base image and run a `Nginx` web server to server the static content reside in the `build` folder.
